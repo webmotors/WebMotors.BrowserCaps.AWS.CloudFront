@@ -1,5 +1,5 @@
-﻿#WebMotors BrowserCaps AWS CloudFront
-##Este componente foi feito para validar se a aplicação está abaixo de um cloudfront com cache de header que não passa o user-agent para fazer cache.
+﻿# WebMotors BrowserCaps AWS CloudFront
+## Este componente foi feito para validar se a aplicação está abaixo de um cloudfront com cache de header que não passa o user-agent para fazer cache.
 O código apenas herda a classe de detect de mobile e valida se veio o header do cloudfront que detect mobile.
 ```
 Exemplo
