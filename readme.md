@@ -1,8 +1,7 @@
 ﻿# WebMotors BrowserCaps AWS CloudFront
-## Este componente foi feito para validar se a aplicação está abaixo de um cloudfront com cache de header que não passa o user-agent para fazer cache.
-O código apenas herda a classe de detect de mobile e valida se veio o header do cloudfront que detect mobile.
+When using Cache in the Cloudfront for HttpGet requests the User-Agent is not sent to the application causing the browser detection to fail to identify if the request came from a Mobile device
 ```
-Exemplo
+Usage Code 
 public class HttpBrowserCapabilities : System.Web.Mobile.MobileCapabilities
 {
 	public override bool IsMobileDevice
@@ -16,12 +15,12 @@ public class HttpBrowserCapabilities : System.Web.Mobile.MobileCapabilities
 	}
 }
 ```
-Mantém o comportamento atual do framework caso não tenha o header se tiver o header e for true retona true
 ```
-web.config
+configuration file
 <system.web>
 	<browserCaps userAgentCacheKeyLength="64">
 		<result type="WebMotors.BrowserCaps.AWS.CloudFront.HttpBrowserCapabilities, WebMotors.BrowserCaps.AWS.CloudFront" />
 	</browserCaps>
 </system.web>
 ```
+Translated by GOOGLE translate
