@@ -6,7 +6,7 @@
 		{
 			get
 			{
-				if ("true".Equals(System.Web.HttpContext.Current.Request.Headers["CloudFront-Is-Mobile-Viewer"]))
+				if (System.Web.HttpContext.Current != null && System.Web.HttpContext.Current.Request != null && "true".Equals(System.Web.HttpContext.Current.Request.Headers["CloudFront-Is-Mobile-Viewer"]))
 					return true;
 				return base.IsMobileDevice;
 			}
